@@ -25,7 +25,7 @@
         }
 
         #user-input {
-            caret-color: #22c55e;
+            caret-color: #009246; /* Verde da bandeira do Brasil */
         }
 
         .hidden {
@@ -49,8 +49,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            background-color: rgba(0, 146, 70, 0.4); /* Verde da bandeira do Brasil com transparência */
             border-radius: 9999px;
-            background-color: rgba(34, 197, 94, 0.4);
             opacity: 0;
             z-index: -1;
         }
@@ -59,7 +59,7 @@
 
         .recording button {
             transform: scale(1.5);
-            background-color: #22c55e !important;
+            background-color: #009246 !important; /* Verde da bandeira do Brasil */
             transition: transform 0.2s ease, background-color 0.2s ease;
         }
     </style>
@@ -68,7 +68,7 @@
 <body class="bg-slate-100 flex items-center justify-center min-h-screen">
     <div class="flex flex-col w-full max-w-3xl h-[85vh] bg-white rounded-2xl shadow-2xl m-4"
         style="transform: translateY(-10%)">
-        <header class="bg-green-600 text-white p-6 rounded-t-2xl shadow-md flex items-center space-x-4">
+        <header class="bg-[#009246] text-white p-6 rounded-t-2xl shadow-md flex items-center space-x-4">
             <img src="images/jesus.jpg" alt="Imagem de Jesus Cristo"
                 class="h-20 w-20 rounded-full object-cover border-2 border-white" />
             <div>
@@ -83,7 +83,7 @@
                 <div class="bg-slate-200 text-slate-800 rounded-lg rounded-bl-none p-3 max-w-lg">
                     <p class="text-sm">
                         Vamos juntos consertar esse país. Converse com a Direita IA, tire suas duvidas sobre o
-                        movimento que mais cresce no mundo.
+                        movimento que mais cresce no mundo!
                     </p>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                     <input type="text" id="user-input" placeholder="Fale ou escreva..."
                         class="flex-1 bg-transparent border-none focus:ring-0 text-slate-800 placeholder-slate-400 px-4" />
                     <button id="send-button"
-                        class="bg-green-600 hover:bg-green-700 text-white rounded-full p-2.5 transition-colors duration-300 ml-2.5 hidden">
+                        class="bg-[#009246] hover:bg-green-700 text-white rounded-full p-2.5 transition-colors duration-300 ml-2.5 hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"
                             fill="currentColor">
                             <path
@@ -105,7 +105,7 @@
 
                     <div class="mic-wrapper">
                         <button id="mic-button"
-                            class="bg-green-600 hover:bg-green-700 text-white rounded-full p-2.5 transition-colors duration-300 ml-2.5">
+                            class="bg-[#009246] hover:bg-green-700 text-white rounded-full p-2.5 transition-colors duration-300 ml-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" id="mic-icon" class="h-6 w-6" viewBox="0 0 20 20"
                                 fill="currentColor">
                                 <path fill-rule="evenodd"
@@ -189,7 +189,7 @@
                 if (recognitionActive) return;
                 recognitionActive = true;
                 micWrapper.classList.add('recording');
-                if (navigator.vibrate) navigator.vibrate(50);
+                if (navigator.vibrate) navigator.vibrate(100);
                 recognition.start();
                 appendMessage('🎙️ Ouvindo...', 'system');
             });
@@ -243,7 +243,7 @@
 
             if (sender === 'user') {
                 messageWrapper.className = 'message-user mb-4 flex justify-end';
-                messageBubble.className = 'bg-green-600 text-white rounded-lg rounded-br-none p-3 max-w-lg';
+                messageBubble.className = 'bg-[#009246] text-white rounded-lg rounded-br-none p-3 max-w-lg';
             } else if (sender === 'ai') {
                 messageWrapper.className = 'message-ai mb-4 flex';
                 messageBubble.className = 'bg-slate-200 text-slate-800 rounded-lg rounded-bl-none p-3 max-w-lg';
