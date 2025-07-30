@@ -25,7 +25,7 @@
         }
 
         #user-input {
-            caret-color: #2563eb;
+            caret-color: #22c55e;
         }
 
         .hidden {
@@ -66,29 +66,24 @@
 </head>
 
 <body class="bg-slate-100 flex items-center justify-center min-h-screen">
-    <div class="flex flex-col w-full max-w-3xl h-[85vh] bg-white rounded-2xl shadow-2xl m-4" style="transform: translateY(-10%)">
-        <header
-            class="bg-blue-600 text-white p-6 rounded-t-2xl shadow-md flex items-center space-x-4"
-        >
-            <img
-                src="images/jesus.jpg"
-                alt="Imagem de Jesus Cristo"
-                class="h-20 w-20 rounded-full object-cover border-2 border-white"
-            />
+    <div class="flex flex-col w-full max-w-3xl h-[85vh] bg-white rounded-2xl shadow-2xl m-4"
+        style="transform: translateY(-10%)">
+        <header class="bg-green-600 text-white p-6 rounded-t-2xl shadow-md flex items-center space-x-4">
+            <img src="images/jesus.jpg" alt="Imagem de Jesus Cristo"
+                class="h-20 w-20 rounded-full object-cover border-2 border-white" />
             <div>
                 <h1 class="text-2xl font-bold">DIREITA - IA</h1>
                 <p class="text-sm text-white">
-                    Deus, Pátria, Família e Liberdade.                </p>
+                    Deus, Pátria, Família e Liberdade. </p>
             </div>
         </header>
 
         <main id="chat-window" class="flex-1 p-6 overflow-y-auto">
             <div class="message-ai mb-4 flex">
-                <div
-                    class="bg-slate-200 text-slate-800 rounded-lg rounded-bl-none p-3 max-w-lg"
-                >
+                <div class="bg-slate-200 text-slate-800 rounded-lg rounded-bl-none p-3 max-w-lg">
                     <p class="text-sm">
-                        Vamos juntos consertar esse país. Converse com a Direita IA, tire suas duvidas sobre o movimento que mais cresce no mundo.
+                        Vamos juntos consertar esse país. Converse com a Direita IA, tire suas duvidas sobre o
+                        movimento que mais cresce no mundo.
                     </p>
                 </div>
             </div>
@@ -97,45 +92,25 @@
         <footer class="p-2 bg-white rounded-b-2xl">
             <div class="w-full">
                 <div class="flex items-center bg-slate-100 rounded-full p-1.5">
-                    <input
-                        type="text"
-                        id="user-input"
-                        placeholder="Fale ou escreva..."
-                        class="flex-1 bg-transparent border-none focus:ring-0 text-slate-800 placeholder-slate-400 px-4"
-                    />
-                    <button
-                        id="send-button"
-                        class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2.5 transition-colors duration-300 ml-2.5 hidden"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6 w-6"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
+                    <input type="text" id="user-input" placeholder="Fale ou escreva..."
+                        class="flex-1 bg-transparent border-none focus:ring-0 text-slate-800 placeholder-slate-400 px-4" />
+                    <button id="send-button"
+                        class="bg-green-600 hover:bg-green-700 text-white rounded-full p-2.5 transition-colors duration-300 ml-2.5 hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"
+                            fill="currentColor">
                             <path
-                                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
-                            />
+                                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                         </svg>
                     </button>
 
                     <div class="mic-wrapper">
-                        <button
-                            id="mic-button"
-                            class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2.5 transition-colors duration-300 ml-2.5"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                id="mic-icon"
-                                class="h-6 w-6"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                            >
-                                <path
-                                    fill-rule="evenodd"
+                        <button id="mic-button"
+                            class="bg-green-600 hover:bg-green-700 text-white rounded-full p-2.5 transition-colors duration-300 ml-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="mic-icon" class="h-6 w-6" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
                                     d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
-                                    clip-rule="evenodd"
-                                />
+                                    clip-rule="evenodd" />
                             </svg>
                         </button>
                     </div>
@@ -268,7 +243,7 @@
 
             if (sender === 'user') {
                 messageWrapper.className = 'message-user mb-4 flex justify-end';
-                messageBubble.className = 'bg-blue-600 text-white rounded-lg rounded-br-none p-3 max-w-lg';
+                messageBubble.className = 'bg-green-600 text-white rounded-lg rounded-br-none p-3 max-w-lg';
             } else if (sender === 'ai') {
                 messageWrapper.className = 'message-ai mb-4 flex';
                 messageBubble.className = 'bg-slate-200 text-slate-800 rounded-lg rounded-bl-none p-3 max-w-lg';
